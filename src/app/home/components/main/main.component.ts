@@ -5,10 +5,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './main.component.html'
 })
 export class MainComponent implements OnInit {
+  isSimulatorStart: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  startSimulator() {
+    this.isSimulatorStart = true;
+  }
+
+  stopSimulator() {
+    this.isSimulatorStart = false;
+  }
+
 
 }

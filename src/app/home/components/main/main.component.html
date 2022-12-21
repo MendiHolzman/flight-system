@@ -1,6 +1,4 @@
 <app-audio></app-audio>
 
-<div class="btn-group m-5 float-end" role="group" aria-label="Basic mixed styles example">
-  <button type="button" class="btn btn-outline-danger"> עצור סימולטור </button>
-  <button type="button" class="btn btn-outline-primary">  11הפעל סימולטור </button>
-</div>
+<button type="button" *ngIf="isSimulatorStart == false" class="btn btn-outline-primary m-5 float-end" (click)="startSimulator()"> הפעל סימולטור </button>
+<button type="button" *ngIf="isSimulatorStart == true" class="btn btn-outline-danger m-5 float-end" (click)="stopSimulator()"> עצור סימולטור </button>
