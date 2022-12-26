@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class LegsServiceService {
   navigateToLeg(legNumber: number) {
     switch (legNumber) {
       case 444:
-        this.router.navigate(['/hanger']);
+        this.router.navigate(['legs/hanger']);
         break;
 
       default:

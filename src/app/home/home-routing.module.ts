@@ -6,7 +6,7 @@ import { BodyComponent } from "./components/body/body.component";
 import { AudioComponent } from "./components/audio/audio.component";
 
 const routes: Routes = [
-{ path: "", component: HomeComponent },
+{ path: "home", component: HomeComponent },
 { path: "main", component: MainComponent },
 { path: "body", component: BodyComponent },
 { path: "audio", component: AudioComponent },

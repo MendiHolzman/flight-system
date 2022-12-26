@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hanger.component.css']
 })
 export class HangerComponent implements OnInit {
+  textDirection: string= 'rtl';
 
   constructor() { }
 

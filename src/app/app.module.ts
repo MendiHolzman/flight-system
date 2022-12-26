@@ -17,13 +17,10 @@ import { far } from '@fortawesome/free-regular-svg-icons';
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
-        AppRoutingModule,
         HomeModule,
         FontAwesomeModule,
+        AppRoutingModule,
     ],
-    exports: [
-
-    ]
 })
 export class AppModule {
     constructor(library: FaIconLibrary) {
