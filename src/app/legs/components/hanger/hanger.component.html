@@ -1,1 +1,28 @@
-<h1 [dir]="textDirection">האנגר</h1>
+<div [dir]="textDirection" class="container spacer pt-3">
+    <div class="row float-start mt-5">
+        <button type="button" class="btn btn-outline-secondary" routerLink="home/home"> לדף הראשי
+        </button>
+    </div>
+
+    <div class="row float-end mt-5">
+        <h2 _ngcontent-xee-c16="" class="title float-end">האנגר</h2>
+        <h6 _ngcontent-xee-c16="" class="subtitle float-end"> מספר מקטע טיסה - {{legDetails.legNumber}} </h6>
+        <div class="col-lg-4 no-trans mt-5">
+            <h5>פרטי מקטע טיסה</h5>
+            <p class="font-14"> פרטיםםםםםם </p>
+        </div>
+    </div>
+
+    <div class="row float-none col-lg-4" style="margin-top: 170px;">
+        <h4>
+            טיסות שנמצאות במקטע הטיסה
+        </h4>
+        <hr>
+        <div *ngFor="let item of list" class="mt-3">
+            <strong> טיסה מספר {{item}} ----------
+            </strong> 
+            <a class="btn btn-outline-primary" href="javascript:void(0);" (click)="goToFlight()">  היכנס לטיסה  </a>
+        </div>
+
+    </div>
+</div>

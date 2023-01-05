@@ -8,6 +8,8 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
     declarations: [
         AppComponent
@@ -20,6 +22,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
         HomeModule,
         FontAwesomeModule,
         AppRoutingModule,
+        HttpClientModule
     ],
 })
 export class AppModule {
