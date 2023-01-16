@@ -1,0 +1,76 @@
+<div class="insideThePlaneImg">
+    <div [dir]="textDirection" class="container pt-3">
+        <div class="row float-start mt-5">
+            <div class="col-12">
+                <button type="button" class="btn btn-dark" (click)="back()"> חזור
+                </button>
+                <button type="button" class="btn btn-dark" routerLink="home/home" style="margin-right:20px;"> לדף הראשי
+                </button>
+            </div>
+        </div>
+
+        <div class="row card mt-5 col-lg-3">
+            <h2 class="title float-end"> טיסה מספר - {{flightNumber}}</h2>
+        </div>
+
+        <div class="row card mt-5 col-lg-3">
+
+            <div class="float-end ">
+                <h5 class="title mb-3">פרטי הטיסה</h5>
+                <ul>
+                    <li>
+                        <p class="font-14"> <strong> מספר אנשים - {{flightDetails.peopleNumberOnFlight}} </strong> </p>
+                    </li>
+                    <li>
+                        <p class="font-14"> <strong> תאריך המראה - {{flightDetails.departureDate}} </strong>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="font-14"> <strong> תאריך נחיתה - {{flightDetails.landingDate}} </strong>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="font-14"> <strong> מזהה מסלול - {{flightDetails.flightRouteId}} </strong>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="font-14"> <strong> זמן כולל - {{flightDetails.totalFlightTimeInHours}} </strong>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="font-14"> <strong> מספר מקטע טיסה נוכחי - {{flightDetails.numberOfCurrentLeg}}
+                            </strong>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="font-14"> <strong> מזהה מטוס - {{flightDetails.planeId}} </strong>
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <!-- <div class="card col-lg-9">
+            <div class="card-body">
+                <h5 class="card-title">  אנשים על הטיסה
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted"> לחץ על תמונת המטוס על מנת להיכנס לטיסה
+                </h6>
+                <hr>
+                <span  *ngFor="let item of list">
+                     <span style="padding-bottom: 30px; margin-bottom: 30px;">
+                        <strong class="card-title m-3" > {{item}}</strong>
+                        <a href="javascript:void(0);" (click)="goToFlight(item)">
+                            <img [src]="imgUrl" [alt]="imgAlt" width="60" height="60" />
+                        </a>
+                     </span>
+                </span>
+
+            </div>
+        </div> -->
+
+        </div>
+
+    </div>
+</div>

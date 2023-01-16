@@ -7,6 +7,10 @@ let UrlsService = class UrlsService {
             getLegFlights: this.mainURL + 'legs/getLegFlights',
             getLegDetailsById: this.mainURL + 'legs/getLegDetailsById',
         };
+        this.flight = {
+            getFlightPassengers: this.mainURL + 'flights/getFlightPassengers',
+            getFlightDetails: this.mainURL + 'flights/getFlightDetails',
+        };
     }
 };
 UrlsService = __decorate([

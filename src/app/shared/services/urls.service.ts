@@ -13,4 +13,9 @@ export class UrlsService {
     getLegDetailsById: this.mainURL + 'legs/getLegDetailsById',
   }
 
+  flight = {
+    getFlightPassengers: this.mainURL + 'flights/getFlightPassengers',
+    getFlightDetails: this.mainURL + 'flights/getFlightDetails',
+  }
+
 }

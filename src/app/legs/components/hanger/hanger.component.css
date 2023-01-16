@@ -1,0 +1,14 @@
+/* .air {
+    width: 40px;
+    height: 40px;
+    background: url('../../../../assets/images//air22.jpeg');
+} */
+
+.hanger {
+    width: 100%;
+    height: 100%;
+    background: url('../../../../assets/images/hanger.jpg')no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

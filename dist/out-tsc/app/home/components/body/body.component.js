@@ -1,5 +1,6 @@
 import { __decorate } from "tslib";
 import { Component } from '@angular/core';
+import { LegsNumbersNames } from 'src/app/legs/model/enums';
 let BodyComponent = class BodyComponent {
     constructor(legsSer) {
         this.legsSer = legsSer;
@@ -8,6 +9,9 @@ let BodyComponent = class BodyComponent {
     }
     goToLeg(legNumber) {
         this.legsSer.navigateToLeg(legNumber);
+    }
+    get connectionResult() {
+        return LegsNumbersNames;
     }
 };
 BodyComponent = __decorate([

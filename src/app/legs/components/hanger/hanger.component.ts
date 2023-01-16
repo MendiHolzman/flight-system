@@ -17,35 +17,47 @@ export class HangerComponent implements OnInit {
   textDirection: string = 'rtl';
   list: number[] = [];
   legDetails: LegDetails = {};
+  skyOrGround: string = "";
+  imgUrl: string = "";
+  imgAlt: string = "";
 
-
-  constructor(private http: HttpClient, private legs: LegsServiceService, private urls: UrlsService) { }
+  constructor(private http: HttpClient, private legs: LegsServiceService,
+    private urls: UrlsService, private legsSer: LegsServiceService) {
+    this.imgUrl = '../../../../assets/images//air22.jpeg';
+    this.imgAlt = "טיסה";
+  }
 
   ngOnInit(): void {
-
     this.getHangerDetails();
-
     setTimeout(() => {
       this.getHangerFlights();
-    }, 3000);
+    }, 2000);
+
   }
 
   getHangerDetails() {
     this.http.get(this.urls.legs.getLegDetailsById + "?id=" + this.legID)
       .subscribe((res: ResultData) => {
-        this.legDetails = res.data;
+        if (res.data.id != -1) {
+          this.legDetails = res.data;
+          this.legDetails.skyOrGround === false ? this.skyOrGround = 'בקרקע' : this.skyOrGround = 'בשמים';
+        }
       });
   }
 
   getHangerFlights() {
+    if (!this.legDetails || !this.legDetails.legNumber) {
+      return;
+    }
+
     this.http.get(this.urls.legs.getLegFlights + "?legNumber=" + this.legDetails.legNumber)
       .subscribe((res: ResultData) => {
         this.list = res.data;
       });
   }
 
-  goToFlight() {
-    alert("Flight is coming!!");
+  goToFlight(flightNumber: number) {
+    this.legsSer.navigateToFlight(flightNumber);
   }
 
 }

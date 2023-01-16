@@ -16,7 +16,7 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     NgModule({
         declarations: [
-            AppComponent
+            AppComponent,
         ],
         providers: [],
         bootstrap: [AppComponent],
